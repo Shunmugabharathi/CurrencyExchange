@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 public interface ExchangeRateRepo extends JpaRepository<ExchRateInfo, Long> {
 
+    //add findby method
     ExchRateInfo findByFromCurrencyAndToCurrency(String fromCurrency, String toCurrency);
 
 }
