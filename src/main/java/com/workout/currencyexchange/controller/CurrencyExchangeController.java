@@ -35,7 +35,7 @@ public class CurrencyExchangeController
         return new ResponseEntity<>(saved, HttpStatus.CREATED);
     }
 
-//update call
+//update
     @PutMapping ("/updateRate")
     public ResponseEntity<ExchRateInfo> updateCurrencyExchange(){
 
