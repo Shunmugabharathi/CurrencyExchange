@@ -19,7 +19,7 @@ public class CurrencyExchangeController
     @Autowired
     ExchangeRateRepo exchangeRateRepo;
 
-    //get call
+
     @GetMapping("/getRate/{fromCurrency}/to/{toCurrency}")
   //  @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public ResponseEntity<ExchRateInfo> getCurrencyExchange(@PathVariable String fromCurrency, @PathVariable String toCurrency ){
@@ -28,7 +28,6 @@ public class CurrencyExchangeController
         return new ResponseEntity<>(exchRateDetails, HttpStatus.OK);
     }
 
-    // post call
     @PostMapping("/addRate")
     public ResponseEntity<ExchRateInfo> addCurrencyExchange(@RequestBody ExchRateInfo exchRateInfo){
 
@@ -37,7 +36,6 @@ public class CurrencyExchangeController
     }
 
 
-    // update call
     @PutMapping ("/updateRate")
     public ResponseEntity<ExchRateInfo> updateCurrencyExchange(){
 
